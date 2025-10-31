@@ -33,7 +33,7 @@
         },
         {
             "id": 2,
-            "type": 1,
+            "type": 2,
             "title": "TEST Springboot",
             "description": "Deploy a TEST Springboot app pointing to https://testing.cole.ca",
             "categories": [ "java", "springboot" ],
@@ -63,7 +63,7 @@
         },
         {
             "id": 3,
-            "type": 1,
+            "type": 3,
             "title": "QA / TEST Springboot",
             "description": "Deploy a QA / TEST Springboot app pointing to https://qa.cole.ca and https://testing.cole.ca",
             "categories": [ "java", "springboot" ],
@@ -93,7 +93,7 @@
         },
         {
             "id": 4,
-            "type": 1,
+            "type": 4,
             "title": "CUSTOM Springboot",
             "description": "Deploy a CUSTOM Springboot app",
             "categories": [ "java", "springboot" ],
