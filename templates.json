@@ -1,11 +1,12 @@
 {
-    "version": "2",
+    "version": "3",
     "templates": [
         {
+            "id": 1,
             "type": 3,
             "title": "QA Springboot",
             "description": "Deploy a QA Springboot app pointing to https://qa.cole.ca",
-            "categories": [ "Java", "Springboot" ],
+            "categories": [ "java", "springboot" ],
             "platform": "linux",
             "repository": {
                 "url": "https://github.com/cole-international-inc/portainer-templates",
@@ -31,10 +32,11 @@
             ]
         },
         {
+            "id": 2,
             "type": 3,
             "title": "TEST Springboot",
             "description": "Deploy a TEST Springboot app pointing to https://testing.cole.ca",
-            "categories": [ "Java", "Springboot" ],
+            "categories": [ "java", "springboot" ],
             "platform": "linux",
             "repository": {
                 "url": "https://github.com/cole-international-inc/portainer-templates",
@@ -60,10 +62,11 @@
             ]
         },
         {
+            "id": 3,
             "type": 3,
             "title": "QA / TEST Springboot",
             "description": "Deploy a QA / TEST Springboot app pointing to https://qa.cole.ca and https://testing.cole.ca",
-            "categories": [ "Java", "Springboot" ],
+            "categories": [ "java", "springboot" ],
             "platform": "linux",
             "repository": {
                 "url": "https://github.com/cole-international-inc/portainer-templates",
@@ -89,10 +92,11 @@
             ]
         },
         {
+            "id": 4,
             "type": 3,
             "title": "CUSTOM Springboot",
             "description": "Deploy a CUSTOM Springboot app",
-            "categories": [ "Java", "Springboot" ],
+            "categories": [ "java", "springboot" ],
             "platform": "linux",
             "repository": {
                 "url": "https://github.com/cole-international-inc/portainer-templates",
