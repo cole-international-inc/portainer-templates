@@ -1,0 +1,133 @@
+{
+    "version": "2.0",
+    "templates": [
+        {
+            "type": 3,
+            "title": "QA Springboot",
+            "description": "Deploy a QA Springboot app pointing to https://qa.cole.ca",
+            "categories": [ "Java", "Springboot" ],
+            "platform": "linux",
+            "repository": {
+                "url": "https://github.com/cole-international-inc/portainer-templates",
+                "stackfile": "stacks/qa-springboot.yml"
+            },
+            "env": [
+                {
+                    "name": "NAME",
+                    "label": "Application Name",
+                    "description": "The name of your Springboot application"
+                },
+                {
+                    "name": "VERSION",
+                    "label": "Application Version",
+                    "description": "The version of your Springboot application",
+                    "default": "latest"
+                },
+                {
+                    "name": "CONTEXT_ROOT",
+                    "label": "Context Root",
+                    "description": "The context root for your Springboot application"
+                }
+            ]
+        },
+        {
+            "type": 3,
+            "title": "TEST Springboot",
+            "description": "Deploy a TEST Springboot app pointing to https://testing.cole.ca",
+            "categories": [ "Java", "Springboot" ],
+            "platform": "linux",
+            "repository": {
+                "url": "https://github.com/cole-international-inc/portainer-templates",
+                "stackfile": "stacks/test-springboot.yml"
+            },
+            "env": [
+                {
+                    "name": "NAME",
+                    "label": "Application Name",
+                    "description": "The name of your Springboot application"
+                },
+                {
+                    "name": "VERSION",
+                    "label": "Application Version",
+                    "description": "The version of your Springboot application",
+                    "default": "latest"
+                },
+                {
+                    "name": "CONTEXT_ROOT",
+                    "label": "Context Root",
+                    "description": "The context root for your Springboot application"
+                }
+            ]
+        },
+        {
+            "type": 3,
+            "title": "QA / TEST Springboot",
+            "description": "Deploy a QA / TEST Springboot app pointing to https://qa.cole.ca and https://testing.cole.ca",
+            "categories": [ "Java", "Springboot" ],
+            "platform": "linux",
+            "repository": {
+                "url": "https://github.com/cole-international-inc/portainer-templates",
+                "stackfile": "stacks/qa-test-springboot.yml"
+            },
+            "env": [
+                {
+                    "name": "NAME",
+                    "label": "Application Name",
+                    "description": "The name of your Springboot application"
+                },
+                {
+                    "name": "VERSION",
+                    "label": "Application Version",
+                    "description": "The version of your Springboot application",
+                    "default": "latest"
+                },
+                {
+                    "name": "CONTEXT_ROOT",
+                    "label": "Context Root",
+                    "description": "The context root for your Springboot application"
+                }
+            ]
+        },
+        {
+            "type": 3,
+            "title": "CUSTOM Springboot",
+            "description": "Deploy a CUSTOM Springboot app",
+            "categories": [ "Java", "Springboot" ],
+            "platform": "linux",
+            "repository": {
+                "url": "https://github.com/cole-international-inc/portainer-templates",
+                "stackfile": "stacks/custom-springboot.yml"
+            },
+            "env": [
+                {
+                    "name": "NAME",
+                    "label": "Application Name",
+                    "description": "The name of your Springboot application"
+                },
+                {
+                    "name": "VERSION",
+                    "label": "Application Version",
+                    "description": "The version of your Springboot application",
+                    "default": "latest"
+                },
+                {
+                    "name": "CONTEXT_ROOT",
+                    "label": "Context Root",
+                    "description": "The context root for your Springboot application"
+                },
+                {
+                    "name": "ENVIRONMENT",
+                    "label": "Environment (QA or TEST)",
+                    "description": "Specify the environment for your Springboot application",
+                    "default": "QA"
+                },
+                {
+                    "name": "ENVIRONMENT_FOLDER",
+                    "label": "Environment Folder",
+                    "description": "Enter the name of the folder where your custom conf and lib folders exist in the file share location",
+                    "default": "qa-default"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+services:
+  {{ENVIRONMENT}}_app:
+    image: registry.cole.ca/{{NAME}}:{{VERSION}}
+    deploy:
+      replicas: 1
+      labels:
+        - "caddy.context={{CONTEXT_ROOT}}"
+        - "caddy.environment={{ENVIRONMENT}}"
+      restart_policy:
+        condition: on-failure
+    sysctls:
+      net.ipv4.tcp_keepalive_time: 60
+      net.ipv4.tcp_keepalive_intvl: 10
+      net.ipv4.tcp_keepalive_probes: 6
+      net.ipv4.ip_local_port_range: "1024 65535"
+    volumes:
+      - /mnt/tomcat/{{ENVIRONMENT_FOLDER}}/conf:/tomcat-conf/conf:ro
+      - /mnt/tomcat/{{ENVIRONMENT_FOLDER}}/lib:/tomcat-conf/lib:ro
+    networks:
+      - app-network
+      - bridge
+
+networks:
+  app-network:
+    external: true
+  bridge:
+    external: true
+    name: bridge
