@@ -1,10 +1,10 @@
 services:
   qa_app:
-    image: registry.cole.ca/{{NAME}}:{{VERSION}}
+    image: registry.cole.ca/${NAME}:${VERSION}
     deploy:
       replicas: 1
       labels:
-        - "caddy.context={{CONTEXT_ROOT}}"
+        - "caddy.context=${CONTEXT_ROOT}"
         - "caddy.environment=QA"
       restart_policy:
         condition: on-failure
@@ -20,11 +20,11 @@ services:
       - app-network
       - bridge
   test_app:
-    image: registry.cole.ca/{{NAME}}:{{VERSION}}
+    image: registry.cole.ca/${NAME}:${VERSION}
     deploy:
       replicas: 1
       labels:
-        - "caddy.context={{CONTEXT_ROOT}}"
+        - "caddy.context=${CONTEXT_ROOT}"
         - "caddy.environment=TEST"
       restart_policy:
         condition: on-failure

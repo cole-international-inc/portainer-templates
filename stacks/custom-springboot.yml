@@ -1,11 +1,11 @@
 services:
-  {{ENVIRONMENT}}_app:
-    image: registry.cole.ca/{{NAME}}:{{VERSION}}
+  ${ENVIRONMENT}_app:
+    image: registry.cole.ca/${NAME}:${VERSION}
     deploy:
       replicas: 1
       labels:
-        - "caddy.context={{CONTEXT_ROOT}}"
-        - "caddy.environment={{ENVIRONMENT}}"
+        - "caddy.context=${CONTEXT_ROOT}"
+        - "caddy.environment=${ENVIRONMENT}"
       restart_policy:
         condition: on-failure
     sysctls:
@@ -14,8 +14,8 @@ services:
       net.ipv4.tcp_keepalive_probes: 6
       net.ipv4.ip_local_port_range: "1024 65535"
     volumes:
-      - /mnt/tomcat/{{ENVIRONMENT_FOLDER}}/conf:/tomcat-conf/conf:ro
-      - /mnt/tomcat/{{ENVIRONMENT_FOLDER}}/lib:/tomcat-conf/lib:ro
+      - /mnt/tomcat/${ENVIRONMENT_FOLDER}/conf:/tomcat-conf/conf:ro
+      - /mnt/tomcat/${ENVIRONMENT_FOLDER}/lib:/tomcat-conf/lib:ro
     networks:
       - app-network
       - bridge
