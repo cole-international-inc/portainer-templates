@@ -1,0 +1,22 @@
+services:
+  qa_app:
+    image: registry.cole.ca/dockergui:latest
+    deploy:
+      replicas: 1
+      labels:
+        - "caddy.context=dockergui"
+        - "caddy.environment=QA"
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - app-network
+      - bridge
+
+networks:
+  app-network:
+    external: true
+  bridge:
+    external: true
+    name: bridge

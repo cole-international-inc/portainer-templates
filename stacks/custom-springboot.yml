@@ -1,5 +1,5 @@
 services:
-  ${ENVIRONMENT}_app:
+  custom_app:
     image: registry.cole.ca/${NAME}:${VERSION}
     deploy:
       replicas: 1

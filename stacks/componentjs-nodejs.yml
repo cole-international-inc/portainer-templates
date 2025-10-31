@@ -1,0 +1,20 @@
+services:
+  qa_app:
+    image: registry.cole.ca/component-js:latest
+    deploy:
+      replicas: 1
+      labels:
+        - "caddy.context=static"
+        - "caddy.environment=QA"
+      restart_policy:
+        condition: on-failure
+    networks:
+      - app-network
+      - bridge
+
+networks:
+  app-network:
+    external: true
+  bridge:
+    external: true
+    name: bridge
