@@ -9,7 +9,7 @@
             "categories": [ "java", "springboot" ],
             "platform": "linux",
             "registry": "registry.cole.ca",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/1200px-Spring_Boot.svg.png",
+            "logo": "https://raw.githubusercontent.com/cole-international-inc/portainer-templates/main/images/Spring_Boot_QA.png",
             "repository": {
                 "url": "https://github.com/cole-international-inc/portainer-templates",
                 "stackfile": "stacks/qa-springboot.yml"
@@ -41,7 +41,7 @@
             "categories": [ "java", "springboot" ],
             "platform": "linux",
             "registry": "registry.cole.ca",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/1200px-Spring_Boot.svg.png",
+            "logo": "https://raw.githubusercontent.com/cole-international-inc/portainer-templates/main/images/Spring_Boot_TEST.png",
             "repository": {
                 "url": "https://github.com/cole-international-inc/portainer-templates",
                 "stackfile": "stacks/test-springboot.yml"
@@ -73,7 +73,7 @@
             "categories": [ "java", "springboot" ],
             "platform": "linux",
             "registry": "registry.cole.ca",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/1200px-Spring_Boot.svg.png",
+            "logo": "https://raw.githubusercontent.com/cole-international-inc/portainer-templates/main/images/Spring_Boot_QT.png",
             "repository": {
                 "url": "https://github.com/cole-international-inc/portainer-templates",
                 "stackfile": "stacks/qa-test-springboot.yml"
@@ -105,7 +105,7 @@
             "categories": [ "java", "springboot" ],
             "platform": "linux",
             "registry": "registry.cole.ca",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/1200px-Spring_Boot.svg.png",
+            "logo": "https://raw.githubusercontent.com/cole-international-inc/portainer-templates/main/images/Spring_Boot_CUSTOM.png",
             "repository": {
                 "url": "https://github.com/cole-international-inc/portainer-templates",
                 "stackfile": "stacks/custom-springboot.yml"
