@@ -12,11 +12,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - app-network
-      - bridge
 
 networks:
   app-network:
     external: true
-  bridge:
-    external: true
-    name: bridge

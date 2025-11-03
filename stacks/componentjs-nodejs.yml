@@ -10,11 +10,7 @@ services:
         condition: on-failure
     networks:
       - app-network
-      - bridge
 
 networks:
   app-network:
     external: true
-  bridge:
-    external: true
-    name: bridge

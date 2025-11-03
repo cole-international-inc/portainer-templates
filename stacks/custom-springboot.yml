@@ -13,11 +13,7 @@ services:
       - /mnt/tomcat/${ENVIRONMENT_FOLDER}/lib:/tomcat-conf/lib:ro
     networks:
       - app-network
-      - bridge
 
 networks:
   app-network:
     external: true
-  bridge:
-    external: true
-    name: bridge

@@ -13,7 +13,6 @@ services:
       - /mnt/tomcat/qa-default/lib:/tomcat-conf/lib:ro
     networks:
       - app-network
-      - bridge
   test_app:
     image: registry.cole.ca/${NAME}:${VERSION}
     deploy:
@@ -33,11 +32,7 @@ services:
       - /mnt/tomcat/test-default/lib:/tomcat-conf/lib:ro
     networks:
       - app-network
-      - bridge
 
 networks:
   app-network:
     external: true
-  bridge:
-    external: true
-    name: bridge
