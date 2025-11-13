@@ -1,6 +1,7 @@
 services:
   qa_app:
     image: registry.cole.ca/${NAME}:${VERSION}
+    hostname: qa-${CONTEXT_ROOT}
     deploy:
       replicas: 1
       labels:

@@ -1,6 +1,7 @@
 services:
   qa_app:
     image: registry.cole.ca/${NAME}:${VERSION}
+    hostname: qa-${CONTEXT_ROOT}
     deploy:
       replicas: 1
       labels:
@@ -15,6 +16,7 @@ services:
       - app-network
   test_app:
     image: registry.cole.ca/${NAME}:${VERSION}
+    hostname: test-${CONTEXT_ROOT}
     deploy:
       replicas: 1
       labels:
