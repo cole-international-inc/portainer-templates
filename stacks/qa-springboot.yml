@@ -4,6 +4,7 @@ services:
     environment:
       NODE_HOST: "{{.Node.Hostname}}"
       TASK_SLOT: "{{.Task.Slot}}"
+      SPRNG_ENV: "qa"
     deploy:
       replicas: 1
       labels:
