@@ -2,8 +2,8 @@ services:
   qa_app:
     image: registry.cole.ca/${NAME}:${VERSION}
     environment:
-      NODE_ID: "qa-{{.Node.ID}}"
-      NODE_HOSTNAME: "qa-{{.Node.Hostname}}"
+      NODE_HOST: "{{.Node.Hostname}}"
+      TASK_SLOT: "{{.Task.Slot}}"
     deploy:
       replicas: 1
       labels:
